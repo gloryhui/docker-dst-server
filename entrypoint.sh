@@ -19,13 +19,13 @@ if [ "$1" == "dontstarve_dedicated_server_nullrenderer" -o "$1" == "supervisord"
     fi
 
     # override server mods folder with user provided one
-    if [ ! -d "/data/DoNotStarveTogether/Cluster_1/mods" ]; then
-        echo "Creating default mod config..."
-        mkdir -p /data/DoNotStarveTogether/Cluster_1
-        cp -r /opt/dst_server/mods /data/DoNotStarveTogether/Cluster_1
-    fi
-    rm -rf /opt/dst_server/mods
-    ln -s /data/DoNotStarveTogether/Cluster_1/mods /opt/dst_server/mods
+    # if [ ! -d "/data/DoNotStarveTogether/Cluster_1/mods" ]; then
+    #     echo "Creating default mod config..."
+    #     mkdir -p /data/DoNotStarveTogether/Cluster_1
+    #     cp -r /opt/dst_server/mods /data/DoNotStarveTogether/Cluster_1
+    # fi
+    # rm -rf /opt/dst_server/mods
+    # ln -s /data/DoNotStarveTogether/Cluster_1/mods /opt/dst_server/mods
 
     # check cluster token
     if [ ! -f "/data/DoNotStarveTogether/Cluster_1/cluster_token.txt" ]; then
